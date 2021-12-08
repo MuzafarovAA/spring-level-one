@@ -1,5 +1,8 @@
 package Lesson_1;
 
+import org.springframework.stereotype.Component;
+
+@Component ("doctor")
 public class PhysicianDoctor implements IDoctor {
 
     private int room = 512;

@@ -2,17 +2,13 @@ package Lesson_1;
 
 public class Room implements IRoom {
 
-    private int roomNumber;
-
-    public void setRoomNumber(int roomNumber) {
-        this.roomNumber = roomNumber;
-    }
+    private IDoctor doctor;
 
     public void visit() {
-        System.out.println("Врач посещён в кабинете " + roomNumber);
+        System.out.println("Врач посещён в кабинете " + doctor.getRoomNumber());
     }
 
     public void setDoctor(IDoctor doctor) {
-        setRoomNumber(doctor.getRoomNumber());
+        this.doctor = doctor;
     }
 }
