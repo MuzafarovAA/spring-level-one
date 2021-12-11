@@ -1,5 +1,3 @@
-package Lesson_1;
-
 public class Room implements IRoom {
 
     private IDoctor doctor;

@@ -5,17 +5,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
 <!--    <context:component-scan base-package="Lesson_1" />-->
-    <bean id="doctor" class="Lesson_1.PhysicianDoctor"></bean>
+    <bean id="doctor" class="PhysicianDoctor"></bean>
 
-    <bean id="room" class="Lesson_1.Room">
+    <bean id="room" class="Room">
         <property name="doctor">
             <ref bean="doctor" />
         </property>
     </bean>
 
-    <bean id="medicalHistory" class="Lesson_1.MedicalHistory"></bean>
+    <bean id="medicalHistory" class="MedicalHistory"></bean>
 
-    <bean id="medicalRecord" class ="Lesson_1.MedicalRecord">
+    <bean id="medicalRecord" class ="MedicalRecord">
         <property name="medicalHistory">
             <ref bean="medicalHistory" />
         </property>

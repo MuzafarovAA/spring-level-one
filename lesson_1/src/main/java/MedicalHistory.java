@@ -1,5 +1,3 @@
-package Lesson_1;
-
 import org.springframework.stereotype.Component;
 
 @Component("medicalHistory")
