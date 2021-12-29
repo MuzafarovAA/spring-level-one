@@ -1,7 +1,6 @@
 package ru.gb.lesson_6.entities;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "categories")
@@ -14,8 +13,9 @@ public class Category {
     @Column(name = "title")
     private String title;
 
-    @OneToMany(mappedBy = "category_id")
-    List<Product> products;
+    @Column(name = "description")
+    private String description;
+
 
     public int getId() {
         return id;
@@ -33,12 +33,11 @@ public class Category {
         this.title = title;
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public String getDescription() {
+        return description;
     }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
+    public void setDescription(String description) {
+        this.description = description;
     }
-
 }
