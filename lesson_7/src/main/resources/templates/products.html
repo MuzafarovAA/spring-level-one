@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Shop Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.3.1/dist/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/main.js}"></script>
+    <link type="text/css" rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+
+<body>
+
+<div class="container">
+    <br>
+    <h1>Продукты</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>id</th>
+            <th>Продукт</th>
+            <th>Категория</th>
+            <th>Удаление</th>
+        </tr>
+
+        <tr class="responsive-row" th:each="product : ${products}">
+            <td th:text="${product.id}"/>
+            <td th:text="${product.title}"/>
+            <td th:text="${product.category_id.getTitle()}"/>
+            <td><a class="btn btn-outline-danger" th:href="@{'/products/delete/' + ${product.id}}" role="button">Remove</a></td>
+
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
