@@ -1,6 +1,8 @@
 package ru.gb.lesson_7.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import ru.gb.lesson_7.entities.Product;
 import ru.gb.lesson_7.repositories.ProductsRepository;
@@ -28,6 +30,11 @@ public class ProductService {
 
     public void delete(int id) {
         productsRepository.deleteById(id);
+    }
+
+    public Page<Product> getAllProductsPages(int pageNumber, int pageSize) {
+        Page<Product> products = productsRepository.findAll(PageRequest.of(pageNumber, pageSize));
+        return products;
     }
 
 

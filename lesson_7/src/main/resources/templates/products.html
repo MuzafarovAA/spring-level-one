@@ -33,6 +33,15 @@
 
         </tr>
     </table>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li th:each="page : ${#numbers.sequence(1, totalPages)}">
+                <a class="page-link" th:href="@{/products(page=${page})}" th:text="${page}"></a>
+            </li>
+        </ul>
+    </nav>
+
 </div>
 
 </body>
