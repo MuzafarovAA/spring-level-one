@@ -35,25 +35,18 @@ build/
 /lesson_4/HELP.md
 
 ## Maven:
-!.mvn/wrapper/maven-wrapper.jar
 /.mvn/
 /mvnw
 /mvnw.bat
 mvnw.cmd
 /log/
 *.log*
-target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.next
 release.properties
 
 ## Eclipse, Spring, and Gradle:
-.classpath
-.project
-.settings
-.factorypath
-.springBeans
 *.pydevproject
 .metadata
 .gradle
@@ -75,3 +68,21 @@ local.properties
 .target
 # TeXlipse plugin
 .texlipse
+
+/lesson_8/.gitignore
+/lesson_6/src/main/resources/static/js/datatable.js
+/lesson_6/src/main/resources/static/favicon.ico
+/lesson_6/src/main/resources/favicon.ico
+/lesson_6/src/main/resources/static/images/icon.png
+/lesson_4/src/test/java/ru/gb/lesson_4/LauncherTests.java
+/lesson_8/src/test/java/ru/gb/lesson_8/Lesson8ApplicationTests.java
+/lesson_6/src/main/resources/static/css/main.css
+/lesson_6/src/main/resources/static/js/main.js
+/lesson_8/.mvn/wrapper/maven-wrapper.jar
+/lesson_4/.mvn/wrapper/maven-wrapper.properties
+/lesson_8/.mvn/wrapper/maven-wrapper.properties
+/lesson_4/.mvn/wrapper/MavenWrapperDownloader.java
+/lesson_8/.mvn/wrapper/MavenWrapperDownloader.java
+/lesson_4/mvnw
+/lesson_8/mvnw
+/lesson_4/.mvn/wrapper/maven-wrapper.jar
