@@ -43,4 +43,7 @@ public class UserService implements UserDetailsService {
         return roles.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
     }
 
+    public User findByUserName(String username) {
+        return userRepository.findOneByUserName(username);
+    }
 }

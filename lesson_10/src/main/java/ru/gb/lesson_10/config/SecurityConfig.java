@@ -45,10 +45,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //    #3
 
     private UserService userService;
+    private SecurityWebApplicationInitializer securityWebApplicationInitializer;
 
     @Autowired
     public void setUserService(UserService userService) {
         this.userService = userService;
+    }
+
+    @Autowired
+    public void setSecurityWebApplicationInitializer(SecurityWebApplicationInitializer securityWebApplicationInitializer) {
+        this.securityWebApplicationInitializer = securityWebApplicationInitializer;
     }
 
     @Bean
