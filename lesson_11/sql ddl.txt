@@ -1,0 +1,10 @@
+create table lesson_11.file_info_metadata
+(
+	id int auto_increment
+		primary key,
+	hash varchar(255) not null,
+	filename varchar(100) not null,
+	subtype int null
+)
+collate=utf8mb4_unicode_ci;
+
